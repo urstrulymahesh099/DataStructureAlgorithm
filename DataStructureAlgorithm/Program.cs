@@ -9,14 +9,14 @@ namespace DataStructureAlgorithm
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine(" 1. Binary Search\n 2. Insertion Sorting  ");
+                Console.WriteLine(" 1. Binary Search\n 2. Insertion Sorting\n3. BubbleSort\n");
                 Console.WriteLine("Enter above mention option");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
                     case 1:
                         BinarySearch binary = new BinarySearch();
-                        binary.ReadTextFile(@"E:\Bridgelabz\LinkedListProblems\DataStructureAlgorithm\NewFolder\BinarySearch.txt");
+                        binary.ReadTextFile(@"E:\Bridgelabz\DataStructureAlgorithm\DataStructureAlgorithm\NewFolder\BinarySearch.txt");
                         binary.BinarySearchOperation("Crazy");
                         break;
 
@@ -25,7 +25,11 @@ namespace DataStructureAlgorithm
                         int[] arr = { 6,2,7, 5, 4,8, 1, 3 };
                         insertionSort.Sort(arr);
                         break;
-
+                    case 3:
+                        BubbleSort bubbleSort = new BubbleSort();
+                        int[] Arr = { 80,60,20, 50, 40,70, 10, 30 };
+                        bubbleSort.Sort(Arr);
+                        break;
                     default:
                         flag = false;
                         Console.WriteLine("Try Again");
