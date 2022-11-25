@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+
 namespace DataStructureAlgorithm
 {
     class Program
@@ -9,7 +11,7 @@ namespace DataStructureAlgorithm
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine(" 1. Binary Search\n 2. Insertion Sorting\n3. BubbleSort\n");
+                Console.WriteLine("1.Binary Search\n2.Insertion Sorting\n3.BubbleSort\n4.AnagramDetection");
                 Console.WriteLine("Enter above mention option");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
@@ -25,10 +27,11 @@ namespace DataStructureAlgorithm
                         int[] arr = { 6,2,7, 5, 4,8, 1, 3 };
                         insertionSort.Sort(arr);
                         break;
-                    case 3:
-                        BubbleSort bubbleSort = new BubbleSort();
-                        int[] Arr = { 80,60,20, 50, 40,70, 10, 30 };
-                        bubbleSort.Sort(Arr);
+                    case 4:
+                        AnagramDetection anagram = new AnagramDetection();
+                        anagram.CheckAnagram("LISTEN", "SILENT");
+                        anagram.CheckAnagram("TOSS", "SHOT");
+                        anagram.CheckAnagram("TRIANGLE", "INTEGRAL");
                         break;
                     default:
                         flag = false;
